@@ -7,7 +7,7 @@
     <title>{{ user.username }} - Sub Info</title>
     <style>
         .asli {
-            background: url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?cs=srgb&dl=pexels-junior-teixeira-2047905.jpg&fm=jpg&_gl=1*cd626i*_ga*NTIzMjU4NjMzLjE3MDkzNDg4NDQ.*_ga_8JE65Q40S6*MTcwOTM0ODg0My4xLjAuMTcwOTM0ODg0My4wLjAuMA..') no-repeat;
+            background: url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?cs=srgb&dl=pexels-junior-teixeira-2047905.jpg&fm=jpg&_gl=1*1djl6xv*_ga*NTIzMjU4NjMzLjE3MDkzNDg4NDQ.*_ga_8JE65Q40S6*MTcwOTM0ODg0My4xLjEuMTcwOTM1MDQ1Ni4wLjAuMA..') no-repeat;
             background-position: center;
             background-size: cover;
         }
@@ -3746,8 +3746,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 howToConnect: "چطوری وصل بشم؟",
                 connectInfo: "با استفاده از منو های زیر نسبت به سیستم عامل خود می توانید از اشتراک خود استفاده کنید.",
                 macInfo: "نکته: اتصال در مک مشابه آی او اِس است",
-                generalAccess: "دسترسی کلی",
-                generalAccessInfo: "در این بخش، شما به کانفیگ های خود به طور جداگانه دسترسی دارید که به شما امکان می دهد هر یک از آنها را از طریق کد QR به اشتراک بگذارید یا می توانید به سادگی آنها را کپی کنید.",
+                generalAccess: "ابزار فرگمنت",
+                generalAccessInfo: "به کمک این ابزار شما میتوانید در سرور های عادی با اینترنت همراه اول متصل شوید. کافیست سایت زیر را باز کرده و در آن کانفیگ خودتان را جاگذاری کنید ولینک فرگمنت شده را تحویل بگیرید... ",
                 supTelInfo: "در صورت وجود هرگونه مشکل در اشتراک, با پشیتبانی تلگرام در ارتباط باشید."
             },
             ru: {
@@ -6184,64 +6184,10 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
                     </h2>
                     <p x-text="$t('generalAccessInfo')" class="text-lg font-normal mb-4 text-gray-300 lg:text-xl"></p>
-                    <div
-                        class="collapse-arrow dark:text-white bg-gradient-to-r dark:from-gray-600 dark:via-gray-700 dark:to-gray-800 from-slate-100 via-slate-200 to-slate-300 text-black transition-all duration-300 font-medium rounded-2xl">
-                        <!-- Accordion item -->
-                        <div x-data="{ expanded: false }">
-                            <h2>
-                                <button id="faqs-title-01" type="button"
-                                    class="flex p-4 rtl:pl-0 items-center justify-between w-full text-left font-semibold"
-                                    @click="expanded = !expanded" :aria-expanded="expanded"
-                                    aria-controls="faqs-text-01">
-                                    <div class="flex items-center justify-start gap-x-2 text-lg sm:text-xl font-medium">
-                                        <div id="myConfigsContainer" class="w-8 h-8">
-                                            <lord-icon class="w-8 h-8" src="https://cdn.lordicon.com/gqzfzudq.json"
-                                                trigger="loop" delay="2000" colors="primary:#fff,secondary:#fff">
-                                            </lord-icon>
-                                        </div>
-                                        <span x-text="$t('myConfigs')">
-                                        </span>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" :class="{'!rotate-180': expanded}"
-                                        class="w-6 h-6 mx-6 transform origin-center transition duration-200 ease-out">
-                                        <path strokeLinecap="round" strokeLinejoin="round"
-                                            d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <div id="faqs-text-01" role="region" aria-labelledby="faqs-title-01"
-                                class="grid text-sm text-white overflow-hidden transition-all duration-300 ease-in-out"
-                                :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'">
-                                <div class="overflow-hidden">
-                                    <div class="p-4 pb-6">
-                                        <div id="configs_section" style="direction: ltr;"
-                                            class="flex flex-col gap-y-2 pt-4">
-                                            <button id="copyBtn"
-                                                class="flex mb-4 items-center justify-between bg-slate-950 px-4 py-3 text-center rounded-lg">
-                                                <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop"
-                                                    delay="2000" colors="primary:#fff,secondary:#fff" class="w-10 h-10">
-                                                </lord-icon>
-                                                <span x-text="$t('copyAllCfgs')" id="copyText">
-                                                </span>
-                                                <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop"
-                                                    delay="2000" colors="primary:#fff,secondary:#fff" class="w-10 h-10">
-                                                </lord-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2 x-text="$t('telsupport')"
-                        class="mb-4 mt-8 text-3xl font-black leading-none tracking-tight text-white md:text-5xl">
-
-                    </h2>
-                    <p x-text="$t('supTelInfo')" class="text-lg font-normal mb-4 text-gray-300 lg:text-xl"></p>
+                    
                     <div class="flex flex-col gap-y-4">
-                        <h2 class="font-bold text-white text-2xl mb-2" x-text="$t('sup')"></h2>
-                        <a href="https://t.me/yourID"
+                        <h2 class="font-bold text-white text-2xl mb-2" x-text="fragment"></h2>
+                        <a href="https://mmdmb1.github.io/fragment/"
                             class="py-3 px-4 transition-all duration-200 inline-flex gap-x-3 justify-center text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-6 h-6 fill-white"
                                 viewBox="0 0 50 50">
@@ -6254,24 +6200,29 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                             <span class="sm:text-lg" x-text="$t('support')"></span>
                         </a>
                     </div>
-                    <div class="flex mt-6 items-center justify-center gap-x-4 mb-4">
-                        <button id="qrIconBtn"
-                            onclick="openDynamicModal('{{ user.username }} Subscription' ,  window.location.href)"
-                            class="bg-gray-100 border-gray-200 dark:bg-gray-700 dark:border-gray-600 rounded-xl pt-1 px-1">
-                            <lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000"
-                                colors="primary:#000,secondary:#000" class="w-10 h-10">
-                            </lord-icon>
-                        </button>
 
-                        <select style="
-               text-indent:15px;
-               height:50px;" id="countries"
-                            class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-3.5 bg-gray-100 border-gray-200 placeholder-gray-800 text-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
-                            <option value="fa">فارسی</option>
-                            <option value="en">English</option>
-                            <option value="ru">Русский</option>
-                        </select>
-                    </div>
+
+
+                    <h2 x-text="$t('telsupport')"
+                        class="mb-4 mt-8 text-3xl font-black leading-none tracking-tight text-white md:text-5xl">
+
+                    </h2>
+                    <p x-text="$t('supTelInfo')" class="text-lg font-normal mb-4 text-gray-300 lg:text-xl"></p>
+                    <div class="flex flex-col gap-y-4">
+                        <h2 class="font-bold text-white text-2xl mb-2" x-text="$t('sup')"></h2>
+                        <a href="tg://resolve?domain=mmdslmkhobi"
+                            class="py-3 px-4 transition-all duration-200 inline-flex gap-x-3 justify-center text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-6 h-6 fill-white"
+                                viewBox="0 0 50 50">
+                                <path
+                                    d="M25,2c12.703,0,23,10.297,23,23S37.703,48,25,48S2,37.703,2,25S12.297,2,25,2z M32.934,34.375	c0.423-1.298,2.405-14.234,2.65-16.783c0.074-0.772-0.17-1.285-0.648-1.514c-0.578-0.278-1.434-0.139-2.427,0.219	c-1.362,0.491-18.774,7.884-19.78,8.312c-0.954,0.405-1.856,0.847-1.856,1.487c0,0.45,0.267,0.703,1.003,0.966	c0.766,0.273,2.695,0.858,3.834,1.172c1.097,0.303,2.346,0.04,3.046-0.395c0.742-0.461,9.305-6.191,9.92-6.693	c0.614-0.502,1.104,0.141,0.602,0.644c-0.502,0.502-6.38,6.207-7.155,6.997c-0.941,0.959-0.273,1.953,0.358,2.351	c0.721,0.454,5.906,3.932,6.687,4.49c0.781,0.558,1.573,0.811,2.298,0.811C32.191,36.439,32.573,35.484,32.934,34.375z">
+                                </path>
+                            </svg>
+
+
+                            <span class="sm:text-lg" x-text="$t('support')"></span>
+                        </a>
+                    </div>                    
                 </div>
             </div>
         </div>
