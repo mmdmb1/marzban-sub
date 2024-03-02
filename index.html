@@ -3969,6 +3969,39 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             class="relative px-6 pt-10 pb-8 shadow-main-sh rounded-none dark:shadow-main-sh-dark sm:mx-auto sm:rounded-3xl sm:px-10 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-0 w-full max-w-2xl">
             <div class="mx-auto max-w-xl">
                 
+                <div class="box">
+                    <input type="text" id="subValue" placeholder="Enter sub-value">
+                    <button id="submitButton">Submit</button>
+                </div>
+                
+                <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                <script defer src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+                <script defer src="https://unpkg.com/alpinejs" defer></script>
+                <script>
+                    document.getElementById("submitButton").addEventListener("click", function() {
+                        const sub = document.getElementById("subValue").value;
+                        let fullUrl = sub;
+                        if (sub.startsWith("http")) {
+                            fullUrl = sub;
+                            setHrefs(fullUrl);
+                        } else {
+                            alert("Sub-value must start with 'http'");
+                        }
+                    });
+                
+                    function setHrefs(fullUrl) {
+                        document.getElementById("ios-streisand").href = `streisand://import/${fullUrl}`;
+                        document.getElementById("ios-v2box").href = `v2box://install-sub?url=${fullUrl}&name=Sub`
+                        document.getElementById("android-v2rayng").href = `v2rayng://install-config?url=${fullUrl}`;
+                        document.getElementById("ios-singbox").href = `sing-box://import-remote-profile?url=${fullUrl}#Sub`;
+                        document.getElementById("android-singbox").href = `hiddify://install-config/?url=${fullUrl}#Sub`;
+                        document.getElementById("android-nekobox").href = `sn://subscription?url=${fullUrl}&name=Sub`;
+                        document.getElementById("windows-clashverge").href = `clash://install-config?url=${fullUrl}`;
+                    }
+                </script>
+                
+
+
                 <div class="flex flex-col gap-y-4 mb-8 text-white text-sm sm:text-base">
                     <h2 x-text="$t('howToConnect')"
                         class="my-4 text-3xl font-black leading-none tracking-tight text-white md:text-5xl">
