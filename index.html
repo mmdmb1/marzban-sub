@@ -22,12 +22,17 @@
             text-align: center;
             max-width: 90%; /* Limit maximum width */
             width: 1400px; /* Default width */
-            height: 100px;}
+            height: 100px;
+            display: flex; /* Use flexbox for layout */
+            flex-direction: row; /* Arrange items horizontally */
+            justify-content: space-between; /* Space items evenly */
+            align-items: center; /* Align items vertically */
+        }
 
         .box input[type="text"] {
-            width: 80%;
+            width: calc(80% - 20px); /* Adjust width of input box */
             padding: 10px;
-            margin: 10px 0;
+            margin: 0;
             box-sizing: border-box;
         }
 
@@ -37,7 +42,6 @@
             color: #fff;
             border: none;
             cursor: pointer;
-            margin-top: 20px; /* Add some space between input and button */
         }
         /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
